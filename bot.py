@@ -175,42 +175,65 @@ def get_back_keyboard():
 def get_help_text():
     channels = bot_config.get("required_channels", [])
     count = len(channels)
-    return f"""⚡️ *ASMIT BAAP HOSTER  | POWERFULL TERMINAL* ⚡️
-*═════════════════════════*
-Welcome to the core system. You have full terminal access. 🚀
+    return f"""╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
+┃   ⚡ ASMIT HOSTER BOT    ┃
+┃   BAAP HOSTER   ┃
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
-💻 *TERMINAL ACTIONS:*
-▪️ Direct commands (`ls`, `mkdir`, `git status`)
-▪️ `cd <dir>` - Switch active directory 📂
-▪️ `pip install <pkg>` - Install Python package 💉
-▪️ `python <script.py>` - Execute scripts 🔥
+┌─ 🖥 SYSTEM
+│  ● Status      : 🟢 Online
+│  ● Uptime      : 2h 34m
+│  ● Storage     : 4.2 GB Free
+│  ● RAM         : 38% Used
+│  ● Channels    : 0 / 10
+└─────────────────────────────
 
-🗂 *FILE OPERATIONS:*
-▪️ Send document directly to bot - Uploads to active dir 📤
-▪️ `/download <filename>` - Download file from server 📥
+┌─ ⚙️ TERMINAL
+│
+│   ls
+│   cd <folder>
+│   mkdir <folder>
+│   git status
+│   pip install <package>
+│   python <script.py>
+│
+└─────────────────────────────
 
-⚙️ *BACKGROUND ENGINES:*
-▪️ `/run <cmd>` - Start background engine 🟢
-▪️ `/stop <pid>` - Kill running engine 🛑
-▪️ `/ps` - List all active engines 📊
+┌─ 📁 FILE MANAGER
+│
+│  📤 Send File → Upload
+│  📥 /download <file>
+│
+└─────────────────────────────
 
-🖥 *SYSTEM VITALS:*
-▪️ `/status` - Live uptime & overview ⏳
-▪️ `/sysinfo` - CPU & RAM utilization 🧬
-▪️ `/disk` - Storage details 💽
-▪️ `/memory` - RAM usage breakdown 🧠
+┌─ 🚀 PROCESS MANAGER
+│
+│  ▶️ /run <command>
+│  ⏹ /stop <pid>
+│  📊 /ps
+│
+└─────────────────────────────
 
-🔑 *ACCESS & CONTROL:*
-▪️ `/myid` - View your Telegram User ID 🪪
-▪️ `/menu` or `/start` - Interactive Dashboard 🎛
-▪️ `/channel` - Add channel via forward *(Max 10)* 📢
-▪️ `/channels` - View & remove channels *(Owner only)* 📋
-▪️ `/channel_del <id>` - Remove specific channel ❌
-▪️ `/add <id>` & `/remove <id>` - Whitelist access 👥
+┌─ 📡 CHANNEL MANAGER
+│
+│  ➕ /channel
+│  📋 /channels
+│  ❌ /channel_del <id>
+│
+└─────────────────────────────
 
-🔒 *Active Channels:* `{count} / {MAX_CHANNELS}`
-*═════════════════════════*
-*SYSTEM READY >_* Type a command or use the buttons below:"""
+┌─ 🔐 ACCESS CONTROL
+│
+│  🪪 /myid
+│  👤 /add <id>
+│  🚫 /remove <id>
+│
+└─────────────────────────────
+
+╭─────────────────────────────╮
+┃  🟢 SYSTEM READY            ┃
+┃  Type a command to continue ┃
+╰─────────────────────────────╯:"""
 
 # ----------------- OWNER CHANNEL MANAGEMENT -----------------
 
