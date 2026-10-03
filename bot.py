@@ -175,7 +175,7 @@ def get_back_keyboard():
 def get_help_text():
     channels = bot_config.get("required_channels", [])
     count = len(channels)
-    return f"""⚡️ *DEV X HOST | NEON TERMINAL* ⚡️
+    return f"""⚡️ *ASMIT BAAP HOSTER  | POWERFULL TERMINAL* ⚡️
 *═════════════════════════*
 Welcome to the core system. You have full terminal access. 🚀
 
@@ -417,7 +417,7 @@ def send_menu(message):
         markup.add(types.InlineKeyboardButton("📩 Request Authorization from Admin", callback_data="send_auth_request"))
         bot.reply_to(
             message,
-            "✅ *[CHANNELS VERIFIED]*\nYou are a member of all required channels.\n\n"
+            "✅ *[CHANNELS VERIFIED]*\nSABASH BETA ASMIT KO NAAZ HE TUMPE ✅.\n\n"
             "🔒 *[AUTHORIZATION REQUIRED]*\nYour account is not whitelisted by the Admin yet.\n"
             "Click below to send an authorization request to the Admin.",
             parse_mode="Markdown",
@@ -442,7 +442,7 @@ def server_status(message):
         return
     is_all_joined, missing = check_channel_subscriptions(user_id)
     if not is_all_joined:
-        bot.reply_to(message, "⚠️ *Access Denied:* Please join all channels.", reply_markup=get_join_channels_keyboard(missing), parse_mode="Markdown")
+        bot.reply_to(message, "⚠️ *Access Denied:* Phele Channels join kr lawde .", reply_markup=get_join_channels_keyboard(missing), parse_mode="Markdown")
         return
 
     uptime = get_uptime()
@@ -731,7 +731,7 @@ def handle_callbacks(call):
 
         channels_count = len(bot_config.get("required_channels", []))
         admin_text = (
-            f"🔔 *[NEW ACCESS REQUEST]*\n\n"
+            f"🔔 *[BHADWA SPOTTED]*\n\n"
             f"👤 *Name:* {safe_full_name}\n"
             f"🔗 *Username:* {safe_username}\n"
             f"🆔 *User ID:* `{user_id}`\n"
@@ -753,7 +753,7 @@ def handle_callbacks(call):
             # Fallback to plain text if Markdown still encounters formatting conflicts
             try:
                 plain_text = (
-                    f"🔔 [NEW ACCESS REQUEST]\n\n"
+                    f"🔔 [BHADWA SPOTTED]\n\n"
                     f"Name: {raw_full_name}\n"
                     f"Username: @{call.from_user.username if call.from_user.username else 'None'}\n"
                     f"User ID: {user_id}\n"
@@ -798,7 +798,7 @@ def handle_callbacks(call):
             user_markup.add(types.InlineKeyboardButton("🚀 Launch Terminal Dashboard", callback_data="btn_main_menu"))
             bot.send_message(
                 target_uid,
-                "🎉 *[ACCESS APPROVED]*\n\nThe System Admin has approved your request! You now have full terminal access.",
+                "🎉 *[ACCESS APPROVED]*\n\nChala lo beta Asmit Ne Approval dediya! You now have full terminal access.",
                 parse_mode="Markdown",
                 reply_markup=user_markup
             )
